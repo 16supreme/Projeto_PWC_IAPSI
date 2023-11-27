@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+  
+    <title>PetHub</title>
+
+    <link href="../Projeto_PWC_IAPSI/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Projeto_PWC_IAPSI/css/contactos.css" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <div class="container py-3">
+      <header>
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+          <a href="../Projeto_PWC_IAPSI/homepage.html" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+            <img src = "../Projeto_PWC_IAPSI/imgs/logo.png" style="height: 50px;width: 50x;border-radius: 5px;">
+          </a>
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/homepage.html">Página Inicial</a>
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/loja.html">Loja</a>
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/sobrenos.html">Sobre nós</a>
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/contactos.html">Contactos</a>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main>
+
+        <section class="py-5 text-center container border-bottom">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-medium text-uppercase">Contactos</h1>
+                    <p class="lead text-body-secondary">Partilhe a sua opinião connosco!</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mt-5">
+            <h2>Contactos</h2>
+            <p>Diogo Ruivo : 2231652@my.ipleiria.pt</p>
+            <p>Tiago Justino : 2231677@my.ipleiria.pt</p>
+            <p>Tomás Monteiro : 2231659@my.ipleiria.pt</p>
+        </div>
+
+        <div class="container mt-5">
+            <h2>Envie-nos uma mensagem!</h2>
+                <form id="form_inscricao" method="POST" action="test_form.php">
+                    <div class="mb-3">
+                        <label for="formcontrol_nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="formcontrol_nome">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formcontrol_nome" class="form-label">Contacto telefónico</label>
+                        <input type="text" class="form-control" id="formcontrol_contacto">
+                        <div class="invalid-feedback"></div>
+                    <div class="mb-3">
+                        <label for="formcontrol_email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="formcontrol_email" placeholder="example@example.com">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formcontrol_nome" class="form-label">Assunto</label>
+                        <input type="text" class="form-control" id="formcontrol_assunto">
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formcontrol_mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="formcontrol_mensagem" rows="3"></textarea>
+                        <div class="invalid-feedback"></div>
+                    </div>  
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Enviar</button>            
+                    </div>
+                </form>
+        </div>
+
+        <hr class="divider">
+
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p class="mb-1">PetHub</p>
+            <p>&copy; Design by Diogo Ruivo, Tiago Justino, Tomás Monteiro</p>
+        </footer>
+    </main>
+
+  </body>
+</html>
