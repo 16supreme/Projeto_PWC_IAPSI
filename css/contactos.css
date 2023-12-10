@@ -24,10 +24,17 @@ body {
 } 
 
 .divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+    margin: 5rem 0; 
 }
   
-  
+.adjust-nav-height{
+  margin-top: -48px;
+}
+
+.adjust-top-margin{
+  margin-top: 60px;
+}
+
 @media (min-width: 62em) {
     
     .col-md-7 {

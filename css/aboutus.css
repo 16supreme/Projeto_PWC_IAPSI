@@ -1,3 +1,7 @@
+.adjust-nav-height{
+  margin-top: -48px;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -75,17 +79,15 @@
   display: block !important;
 }
 
+html{
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: rgb(var(--bs-tertiary-color-rgb));
-}
-
-/* CAROUSEL */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
 }
 
 .carousel-caption {
@@ -93,12 +95,10 @@ body {
   z-index: 10;
 }
 
-/* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
 }
 
-/* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -109,14 +109,9 @@ body {
   margin-left: .75rem;
 }
 
-
-/* Featurettes */
-
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 5rem 0;
 }
-
-/* Thin out the marketing headings */
 
 .featurette-heading {
   letter-spacing: -.05rem;
@@ -162,4 +157,3 @@ body {
   }
   
 }
-
