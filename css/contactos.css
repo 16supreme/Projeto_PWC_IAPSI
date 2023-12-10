@@ -1,0 +1,49 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+  
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+} 
+
+.divider {
+    margin: 5rem 0; 
+}
+  
+.adjust-nav-height{
+  margin-top: -48px;
+}
+
+.adjust-top-margin{
+  margin-top: 60px;
+}
+
+@media (min-width: 62em) {
+    
+    .col-md-7 {
+      margin-left: 4rem;
+    }
+    .col-md-5 {
+      margin-left: 4rem;
+      background-size: contain;
+      background-position: center;
+    }
+    
+}

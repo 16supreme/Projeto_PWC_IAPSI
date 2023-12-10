@@ -1,11 +1,82 @@
-body {
-  background-image: linear-gradient(180deg, var(--bs-secondary-bg), var(--bs-body-bg) 100px, var(--bs-body-bg));
+html{
+  overflow-x: hidden;
+  max-width: 100%;
+}
+body{
+  background-color: white;
 }
 
-.container {
-  max-width: 960px;
+.left-margin-adjust{
+  margin-left:-30px;
 }
 
-.pricing-header {
-  max-width: 700px;
+#pesquisaIcon{
+  height: 22px;
+  width: 22px;
+}
+
+.homebutt{
+  align-items: center;
+}
+
+.homebutt:hover{
+  border-width: 1px;
+  border-color: rgb(114, 158, 252);
+  background-color: aliceblue;
+}
+
+.prevent-select {
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+.button-img{
+  height: 80px;
+  width: 80px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+  font-size: 3.5rem;
+  }
+}
+
+
+#pesquisaIcon{
+  height: 22px;
+  width: 22px;
+}
+
+.homebutt{
+  align-items: center;
+}
+
+.homebutt:hover{
+  border-width: 1px;
+  border-color: rgb(114, 158, 252);
+  background-color: aliceblue;
+}
+
+.prevent-select {
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+.button-img{
+  height: 80px;
+  width: 80px;
+  margin-bottom: 15px;
+  margin-top: 5px;
 }
