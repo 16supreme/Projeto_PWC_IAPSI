@@ -1,3 +1,17 @@
 .leftMarginRadioOrChecked {
     margin-left: 30px;
 }
+
+.successMessage {
+    display: none;
+    position: fixed;
+    color: white;
+    background-color: #4CAF50;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
