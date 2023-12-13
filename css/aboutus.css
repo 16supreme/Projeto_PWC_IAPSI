@@ -157,3 +157,21 @@ body {
   }
   
 }
+
+.carousel { 
+  position: relative; 
+  width: 270px; 
+  height: 160px; 
+  overflow: hidden; 
+  background-color: #cdcdcd; 
+} 
+
+
+.carousel-item.active { 
+  left: 0; 
+  transition: all 1s ease-out; 
+} 
+
+.carousel-item div { 
+  height: 100%; 
+} 
