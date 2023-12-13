@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function(){
         event.preventDefault();
         validateForm();
 
+        var feedbackMessage = document.getElementById('feedbackMessage');
+
         if(validateForm() == 1){
             var fullName = document.getElementById('exampleInputName').value;
             var phone = document.getElementById('exampleInputPhone').value;
@@ -12,24 +14,59 @@ document.addEventListener('DOMContentLoaded', function(){
             var age = document.getElementById('exampleInputAge').value;
             var address = document.getElementById('exampleFormControlAddress').value;
             var schedule = document.getElementById('exampleInputSchedule').value;
+            var city = document.getElementById('exampleInputCity').value;
             var job = document.getElementById('exampleInputJob').value;
             var especifyAnimal = document.getElementById('exampleInputEspecifyAnimal').value;
-            
             var animalGenre = $("input[type='radio'][name='flexRadioDefault']:checked").val();
-
+            var adoptionObj = [];
             var Children = [];
-
+            var habitationType = $("input[type='radio'][name='flexRadioDefault2']:checked").val();
+            var garden = $("input[type='radio'][name='flexRadioDefault15']:checked").val();
+            var habitation = $("input[type='radio'][name='flexRadioDefault3']:checked").val();
+            var adults = document.getElementById('exampleInputAdults').value;
+            var homeVisits = $("input[type='radio'][name='flexRadioDefault4']:checked").val();
+            var animalTime = document.getElementById('exampleInputAnimalTime').value;
+            var otherAnimals = document.getElementById('exampleInputOtherAnimals').value;
+            var likesChildren = $("input[type='radio'][name='flexRadioDefault5']:checked").val();
+            var likesOtherAnimals = $("input[type='radio'][name='flexRadioDefault6']:checked").val();
+            var likesStrangers = $("input[type='radio'][name='flexRadioDefault7']:checked").val();
+            var sterelized = $("input[type='radio'][name='flexRadioDefault8']:checked").val();
+            var lap = $("input[type='radio'][name='flexRadioDefault9']:checked").val();
+            var calm = $("input[type='radio'][name='flexRadioDefault10']:checked").val();
+            var aloneBehavior = $("input[type='radio'][name='flexRadioDefault11']:checked").val();
+            var AnimalActivity = [];
+            var firstAnimal = $("input[type='radio'][name='flexRadioDefault16']:checked").val();
+            var notFirstAnimal = document.getElementById('exampleInputNotFirstAnimal').value;
+            var absence = [];
+            var animalStuck = $("input[type='radio'][name='flexRadioDefault12']:checked").val();
+            var vet = document.getElementById('exampleInputVet').value;
+            var vetAccident = $("input[type='radio'][name='flexRadioDefault13']:checked").val();
+            var animalAlimentation = [];
+            var plans = [];
+            var alergies = document.getElementById('exampleInputAlergies').value;
+            var pregnancy = document.getElementById('exampleInputPregnancy').value;
+            var pregnancyPositive = document.getElementById('exampleInputPregnancyPositive').value;
+            var adoptionHelp = $("input[type='radio'][name='flexRadioDefault14']:checked").val();
+            var extraInfo = document.getElementById('exampleInputExtraInfo').value;
+            
+            $("input[type='checkbox'][name=flexCheckDefault]:checked").each(function(){
+                adoptionObj.push($(this).val());
+            });
             $("input[type='checkbox'][name=flexCheckDefault1]:checked").each(function(){
                 Children.push($(this).val());
             });
-            
-            var city = document.getElementById('exampleInputCity').value;
-            var city = document.getElementById('exampleInputCity').value;
-            var city = document.getElementById('exampleInputCity').value;
-            var city = document.getElementById('exampleInputCity').value;
-            var city = document.getElementById('exampleInputCity').value;
-
-            console.log(Children);
+            $("input[type='checkbox'][name=flexCheckDefault2]:checked").each(function(){
+                AnimalActivity.push($(this).val());
+            });
+            $("input[type='checkbox'][name=flexCheckDefault3]:checked").each(function(){
+                absence.push($(this).val());
+            });
+            $("input[type='checkbox'][name=flexCheckDefault4]:checked").each(function(){
+                animalAlimentation.push($(this).val());
+            });
+            $("input[type='checkbox'][name=flexCheckDefault5]:checked").each(function(){
+                plans.push($(this).val());
+            });
             
             var formData = {
                 "Nome": fullName,
@@ -41,12 +78,48 @@ document.addEventListener('DOMContentLoaded', function(){
                 "Cidade": city,
                 "Profissao": job,
                 "Especificacao_Animal": especifyAnimal,
-                "Genero_Animal": animalGenre
+                "Genero_Animal": animalGenre,
+                "Objetivo_Adoçao":adoptionObj,
+                "Tipo_Habitacao":habitationType,
+                "Jardim_Vedacao":garden,
+                "Habitacao":habitation,
+                "Adultos":adults,
+                "Visitas_Crianças":homeVisits,
+                "Animal_Sozinho":animalTime,
+                "Outros_Animais":otherAnimals,
+                "Gosta_Crianças":likesChildren,
+                "Gosta_Outro_Animais":likesOtherAnimals,
+                "Gosta_Estranhos":likesStrangers,
+                "Esterilizado":sterelized,
+                "Goste_Colo":lap,
+                "Calmo":calm,
+                "Porte_Bem_Sozinho":aloneBehavior,
+                "Atividade_Animal":AnimalActivity,
+                "Primeiro_Animal":firstAnimal,
+                "Nao_Primeiro_Animal":notFirstAnimal,
+                "Ausencia":absence,
+                "Animal_Preso":animalStuck,
+                "Veterinario":vet,
+                "Veterinario_Acidente":vetAccident,
+                "Alimentacao_Animal":animalAlimentation,
+                "Planos":plans,
+                "Alergias":alergies,
+                "Gravidez":pregnancy,
+                "Gravidez_Positivo":pregnancyPositive,
+                "Ajuda_Adocao":adoptionHelp,
+                "Informacao_Adicional":extraInfo
             };
 
             saveFormData(formData);
+
+            feedbackMessage.style.display = 'block';
+            
+            fadeIn(feedbackMessage);
+            setTimeout(function () {
+                fadeOut(feedbackMessage);
+            }, 4000);
         }
-    });
+    },false);
 });
 
 function validateForm(){
@@ -105,6 +178,27 @@ function validateForm(){
     var elementAnimalActivity4 = document.getElementById("AnimalActivity4");
     var elementFirstAnimal = document.getElementById("FirstAnimal");
     var elementFirstAnimal2 = document.getElementById("FirstAnimal2");
+    var elementAbsence1 = document.getElementById("Absence1");
+    var elementAbsence2 = document.getElementById("Absence2");
+    var elementAbsence3 = document.getElementById("Absence3");
+    var elementAnimalStuck1 = document.getElementById("AnimalStuck1");
+    var elementAnimalStuck2 = document.getElementById("AnimalStuck2");
+    var elementVet = document.getElementById("exampleInputVet");
+    var elementVetAccident1 = document.getElementById("VetAccident1");
+    var elementVetAccident2 = document.getElementById("VetAccident2");
+    var elementAnimalAlimentation1 = document.getElementById("AnimalAlimentation1");
+    var elementAnimalAlimentation2 = document.getElementById("AnimalAlimentation2");
+    var elementAnimalAlimentation3 = document.getElementById("AnimalAlimentation3");
+    var elementAnimalAlimentation4 = document.getElementById("AnimalAlimentation4");
+    var elementPlans1 = document.getElementById("Plans1");
+    var elementPlans2 = document.getElementById("Plans2");
+    var elementPlans3 = document.getElementById("Plans3");
+    var elementPlans4 = document.getElementById("Plans4");
+    var elementPlans5 = document.getElementById("Plans5");
+    var elementAlergies = document.getElementById("exampleInputAlergies");
+    var elementPregnancy = document.getElementById("exampleInputPregnancy");
+    var elementAdoptionHelp1 = document.getElementById("AdoptionHelp1");
+    var elementAdoptionHelp2 = document.getElementById("AdoptionHelp2");
     var elementPolitics = document.getElementById("exampleCheck1");
     
     var validated = 1;
@@ -244,6 +338,51 @@ function validateForm(){
         validated = 0;
     }
 
+    if(elementAbsence1.checked != true && elementAbsence2.checked != true  && elementAbsence3.checked != true){
+        showMessage('AbsenceRadio','Selecione pelo menos uma das opções!');
+        validated = 0;
+    }
+
+    if(elementAnimalStuck1.checked != true && elementAnimalStuck2.checked != true){
+        showMessage('AnimalStuckRadio','Selecione pelo menos uma das opções!');
+        validated = 0;
+    }
+
+    if(elementVetAccident1.checked != true && elementVetAccident2.checked != true){
+        showMessage('VetAccidentRadio','Selecione pelo menos uma das opções!');
+        validated = 0;
+    }
+
+    if(elementVet.value.length == 0){
+        showMessage('exampleInputVet','Vazio!');
+        validated = 0;
+    }
+
+    if(elementAnimalAlimentation1.checked != true && elementAnimalAlimentation2.checked != true && elementAnimalAlimentation3.checked != true && elementAnimalAlimentation4.checked != true){
+        showMessage('AnimalAlimentationCheckBox','Selecione pelo menos uma das opções!');
+        validated = 0;
+    }
+
+    if(elementPlans1.checked != true && elementPlans2.checked != true && elementPlans3.checked != true && elementPlans4.checked != true && elementPlans5.checked != true){
+        showMessage('PlansCheckBox','Selecione pelo menos uma das opções!');
+        validated = 0;
+    }
+
+    if(elementAlergies.value.length == 0){
+        showMessage('exampleInputAlergies','Vazio!');
+        validated = 0;
+    }
+
+    if(elementPregnancy.value.length == 0){
+        showMessage('exampleInputPregnancy','Vazio!');
+        validated = 0;
+    }
+
+    if(elementAdoptionHelp1.checked != true && elementAdoptionHelp2.checked != true){
+        showMessage('AdoptionHelpRadio','Selecione pelo menos uma das opções!');
+        validated = 0;
+    }
+
     if(elementPolitics.checked != true){
         showMessage('exampleCheck1','É necessário aceitar as políticas de privacidade!');
         validated = 0;
@@ -270,4 +409,15 @@ function saveFormData(formData) {
     storedFormData.push(formData);
 
     localStorage.setItem('formData', JSON.stringify(storedFormData));
+}
+
+function fadeIn(msg) {
+    msg.style.opacity = '1';
+}
+
+function fadeOut(msg) {
+    msg.style.opacity = '0';
+    setTimeout(function () {
+        msg.style.display = 'none';
+    }, 400);
 }

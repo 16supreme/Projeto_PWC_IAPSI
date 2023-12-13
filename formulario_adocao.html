@@ -23,6 +23,7 @@
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/homepage.html">Página Inicial</a>
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/loja.html">Loja</a>
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/formulario_adocao.html">Formulário de adoção</a>
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/sobrenos.html">Sobre nós</a>
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/contactos.html">Contactos</a>
           </nav>
@@ -42,8 +43,8 @@
   </section>
 
     <div class="album py-5 bg-body-tertiary">
-        <div id="form_adocao" class="container">
-            <form action="" method="POST">
+        <div class="container">
+            <form id="form_adocao" action="" method="POST">
                 <div class="mb-3">
                     <h2 class="form-label">Formulário para adoção</h2>
                 </div>
@@ -109,15 +110,15 @@
                 <div class="mb-3">
                     <label for="exampleInputAdoptionObj" class="form-label">Qual o objetivo da adocão?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="C.O.A" id="AdoptionObj1">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault" value="C.O.A" id="AdoptionObj1">
                         <label class="form-check-label" for="flexCheckDefault">Companhia para outro animal</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Companhia" id="AdoptionObj2">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault" value="Companhia" id="AdoptionObj2">
                         <label class="form-check-label" for="flexCheckDefault">Companhia</label>
                     </div>
                     <div class="form-check" id="AdoptionObjCheckBox">
-                        <input class="form-check-input" type="checkbox" value="Criação" id="AdoptionObj3">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault" value="Criação" id="AdoptionObj3">
                         <label class="form-check-label" for="flexCheckDefault">Criação</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -137,11 +138,11 @@
                 <div class="mb-3">
                     <label for="exampleInputGarden" class="form-label">Se tem jardim, este está completamente vedado?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="" value="Sim" id="HabitationGarden1">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault15" value="Sim" id="HabitationGarden1">
                         <label class="form-check-label" for="flexRadioDefault37">Sim</label>
                     </div>
                     <div class="form-check" id="HabitationGardenRadio">
-                        <input class="form-check-input" type="radio" value="" value="Não" id="HabitationGarden2">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault15" value="Não" id="HabitationGarden2">
                         <label class="form-check-label" for="flexRadioDefault38">Não</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -166,19 +167,19 @@
                 <div class="mb-3">
                     <label for="exampleInputChildren" class="form-label">Vivem crianças na casa? Se sim, indique o intervalo de idades.</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1" value="1" id="ChildrenOpt">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1" value="N/E" id="ChildrenOpt">
                         <label class="form-check-label" for="flexCheckDefault">Não existem crianças</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1" value="2" id="ChildrenOpt2">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1" value=">5" id="ChildrenOpt2">
                         <label class="form-check-label" for="flexCheckDefault">Inferior a 5 anos</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1"value="3" id="ChildrenOpt3">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1"value="5 - 10" id="ChildrenOpt3">
                         <label class="form-check-label" for="flexCheckDefault">5 a 10 anos</label>
                     </div>
                     <div class="form-check" id="ChildrenCheckBox">
-                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1" value="4" id="ChildrenOpt4">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault1" value=">10" id="ChildrenOpt4">
                         <label class="form-check-label" for="flexCheckDefault">Superior a 10 anos</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -322,19 +323,19 @@
                     <div class="mb-3 leftMarginRadioOrChecked">
                         <label for="exampleInputAnimalActivity" class="form-label">Atividade do animal:</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="AnimalActivity">
+                            <input class="form-check-input" type="checkbox" name="flexCheckDefault2" value="Calmo" id="AnimalActivity">
                             <label class="form-check-label" for="flexCheckDefault">Calmo</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="AnimalActivity2">
+                            <input class="form-check-input" type="checkbox" name="flexCheckDefault2" value="Moderadamente ativo" id="AnimalActivity2">
                             <label class="form-check-label" for="flexCheckDefault">Moderadamente ativo</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="AnimalActivity3">
+                            <input class="form-check-input" type="checkbox" name="flexCheckDefault2" value="Ativo" id="AnimalActivity3">
                             <label class="form-check-label" for="flexCheckDefault">Ativo</label>
                         </div>
                         <div class="form-check" id="AnimalActivityCheckBox">
-                            <input class="form-check-input" type="checkbox" value="" id="AnimalActivity4">
+                            <input class="form-check-input" type="checkbox" name="flexCheckDefault2" value="Indiferente" id="AnimalActivity4">
                             <label class="form-check-label" for="flexCheckDefault">Indiferente</label>
                         </div>
                         <div class="invalid-feedback"></div>
@@ -343,12 +344,12 @@
                 <div class="mb-3">
                     <label for="exampleInputFirstAnimal" class="form-label">Será o seu primeiro animal?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="FirstAnimal">
-                        <label class="form-check-label" for="flexCheckDefault">Sim</label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault16" id="FirstAnimal">
+                        <label class="form-check-label" for="flexRadioDefault37">Sim</label>
                     </div>
                     <div class="form-check" id="FirstAnimalRadio">
-                        <input class="form-check-input" type="checkbox" value="" id="FirstAnimal2">
-                        <label class="form-check-label" for="flexCheckDefault">Não</label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault16" id="FirstAnimal2">
+                        <label class="form-check-label" for="flexRadioDefault38">Não</label>
                     </div>
                     <div class="invalid-feedback"></div>
                 </div>
@@ -359,15 +360,15 @@
                 <div class="mb-3">
                     <label for="exampleInputAbsence" class="form-label">Na sua ausência (ferias p.ex.) como prentendia deixar o animal?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault3" value="Cuidados-Familiar" id="Absence1">
                         <label class="form-check-label" for="flexCheckDefault">Ficará aos cuidados de um familiar/conhecido;</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault3" value="Hotel" id="Absence2">
                         <label class="form-check-label" for="flexCheckDefault">Ficará em hotel; </label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <div class="form-check" id="AbsenceRadio">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault3" value="Férias" id="Absence3">
                         <label class="form-check-label" for="flexCheckDefault">Irá comigo de férias.</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -375,11 +376,11 @@
                 <div class="mb-3">
                     <label for="exampleInputAnimalStuck" class="form-label">O animal ficará preso em alguma situação?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault31">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault12" id="AnimalStuck1">
                         <label class="form-check-label" for="flexRadioDefault31">Sim</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault32">
+                    <div class="form-check" id="AnimalStuckRadio">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault12" id="AnimalStuck2">
                         <label class="form-check-label" for="flexRadioDefault32">Não</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -387,15 +388,16 @@
                 <div class="mb-3">
                     <label for="exampleInputVet" class="form-label">Tem algum veterinário preferido? Se sim, deixe o seu nome e contacto.</label>
                     <input type="text" class="form-control" id="exampleInputVet">
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputVetAccident" class="form-label">Em caso de acidente, irá recorrer a um veterinário?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault13" id="flexRadioDefault33">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault13" id="VetAccident1">
                         <label class="form-check-label" for="flexRadioDefault33">Sim</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault13" id="flexRadioDefault34">
+                    <div class="form-check" id="VetAccidentRadio">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault13" id="VetAccident2">
                         <label class="form-check-label" for="flexRadioDefault34">Não</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -403,19 +405,19 @@
                 <div class="mb-3">
                     <label for="exampleInputAnimalAlimentation" class="form-label">Que tipo de alimentação pretende dar ao animal?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault4" value="R.S" id="AnimalAlimentation1">
                         <label class="form-check-label" for="flexCheckDefault">Ração Seca</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault4" value="R.H" id="AnimalAlimentation2">
                         <label class="form-check-label" for="flexCheckDefault">Ração Húmida</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault4" value="C.C" id="AnimalAlimentation3">
                         <label class="form-check-label" for="flexCheckDefault">Comida Caseira</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <div class="form-check" id="AnimalAlimentationCheckBox">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault4" value="Restos" id="AnimalAlimentation4">
                         <label class="form-check-label" for="flexCheckDefault">Restos de refeições</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -423,23 +425,23 @@
                 <div class="mb-3">
                     <label for="exampleInputPlans" class="form-label">O que está nos seus planos para os 10/15 anos?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault5" value="Filhos" id="Plans1">
                         <label class="form-check-label" for="flexCheckDefault">Ter filhos</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault5" value="Viajar" id="Plans2">
                         <label class="form-check-label" for="flexCheckDefault">Viajar</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault5" value="Casar" id="Plans3">
                         <label class="form-check-label" for="flexCheckDefault">Casar</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" name="flexCheckDefault5" value="Mudança" id="Plans4">
                         <label class="form-check-label" for="flexCheckDefault">Mudar de país/cidade/etc</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <div class="form-check" id="PlansCheckBox">
+                        <input class="form-check-input" type="checkbox" value="" id="Plans5">
                         <label class="form-check-label" for="flexCheckDefault">Mudar de casa</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -461,11 +463,11 @@
                 <div class="mb-3">
                     <label for="exampleInputAdoptionHelp" class="form-label">Gostaria de continuar a ter o nosso apoio/conselhos, depois de adotar o animal?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault14" id="flexRadioDefault35">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault14" id="AdoptionHelp1">
                         <label class="form-check-label" for="flexRadioDefault35">Sim</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault14" id="flexRadioDefault36">
+                    <div class="form-check" id="AdoptionHelpRadio">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault14" id="AdoptionHelp2">
                         <label class="form-check-label" for="flexRadioDefault36">Não</label>
                     </div>
                     <div class="invalid-feedback"></div>
@@ -481,6 +483,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
+            <div class="successMessage" id="feedbackMessage">Formulário submetido com sucesso!</div>
         </div>
     </div>
 </main>

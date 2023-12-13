@@ -24,6 +24,7 @@
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/homepage.html">Página Inicial</a>
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/loja.html">Loja</a>
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/formulario_adocao.html">Formulário de adoção</a>
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/sobrenos.html">Sobre nós</a>
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="../Projeto_PWC_IAPSI/contactos.html">Contactos</a>
           </nav>
@@ -69,6 +70,7 @@
                     <div class="mb-3">
                         <label for="formcontrol_nome" class="form-label">Assunto</label>
                         <input type="text" class="form-control" id="formcontrol_assunto">
+                        <div class="invalid-feedback"></div>
                     </div>
                     </div>
                     <div class="mb-3">
@@ -80,18 +82,23 @@
                         <button type="submit" class="btn btn-primary">Enviar</button>            
                     </div>
                 </form>
+                <div class="successMessage" id="feedbackMessage">Formulário submetido com sucesso!</div>
         </div>
-
-        <footer class="text-body-secondary py-5 border-top adjust-top-margin">
-          <div class="container">
-            <p class="float-end mb-1">
-              <a href="#">Back to top</a>
-            </p>
-            <p class="mb-1">PetHub</p>
-            <p class="mb-0">© Design by Diogo Ruivo, Tiago Justino, Tomás Monteiro</p>
-          </div>
-        </footer>
     </main>
+        
+    <footer class="text-body-secondary py-5 border-top adjust-top-margin">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+          <p class="mb-1">PetHub</p>
+          <p class="mb-0">© Design by Diogo Ruivo, Tiago Justino, Tomás Monteiro</p>
+        </div>
+      </footer>
+
+      <script src="../Projeto_PWC_IAPSI/js/contactos.js" type="text/javascript"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
 
   </body>
 </html>
