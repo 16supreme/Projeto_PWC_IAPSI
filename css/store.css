@@ -12,5 +12,31 @@
     }
   }
 
+.successMessage {
+  display: none;
+  position: fixed;
+  color: white;
+  background-color: #4CAF50;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}  
 
+.quantityMessage {
+  display: none;
+  position: fixed;
+  color: white;
+  background-color: #af4c4c;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+} 
 
