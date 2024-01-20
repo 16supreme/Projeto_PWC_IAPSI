@@ -9,7 +9,7 @@
     <title>PetHub</title>
 
     <link href="../Projeto_PWC_IAPSI/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Projeto_PWC_IAPSI/css/aboutus.css" rel="stylesheet">
+    <link href="../Projeto_PWC_IAPSI/css/caes_para_adocao.css" rel="stylesheet">
   </head>
 
   <body>      
@@ -33,14 +33,51 @@
     </div>
  
     <main>
+        <div class="container">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
 
-      
-      <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p class="mb-1">PetHub</p>
-        <p>&copy; Design by Diogo Ruivo, Tiago Justino, Tomás Monteiro</p>
-      </footer>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img class="image" width="100%" height="100%" src="">
+                    <div class="card-body">
+                    <p class="título" id="item1Text"></p>
+                    <ul>
+                        <li>placeholder</li>
+                        <li>placeholder</li>
+                        <li>placeholder</li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                        <button type="button" id="buyButton1" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                        </div>
+                        <input type="number" id="quantitySelector1" min="0" max="10" step="1" value="0" size="11">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
+
+    <footer class="text-body-secondary py-5 border-top">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">PetHub</p>
+            <p class="mb-0">© Design by Diogo Ruivo, Tiago Justino, Tomás Monteiro</p>
+        </div>
+    </footer>
+
+    <script src="../Projeto_PWC_IAPSI/js/CaesParaAdocao.js" type="text/javascript"></script>
 
   </body>
 </html>
