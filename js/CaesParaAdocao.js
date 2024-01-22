@@ -1,5 +1,5 @@
 
-var validToken="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxazlyU0s2NUZlbXp2VUNDMUpHZWZNTUZwT1R4YmdYVE4zcFNxVUtFTFZMVDFhNFJaSiIsImp0aSI6ImYwMTUzN2Y4NTUzODQ1MTkyZWQxZDBhMTM3NzQ3ZTI0N2NkNGUwMWQ3ODA3MzA1ZTkwYjJhODAyNjFiMmRhOWFjOTJmNDhmYzBhNmQ4MjBiIiwiaWF0IjoxNzA1ODg4MTY4LCJuYmYiOjE3MDU4ODgxNjgsImV4cCI6MTcwNTg5MTc2OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.HQdJ76nZi1SSCt186OmTjTmQ6_rfXF9OQsndoKQL4xetMMCAUMHnvu4jO_hayI7hAoApxQnu76UYJaKafj3Z9z4Lj2el2ADh3NchzGGbzDBu7KtUPuvluvgGzCkyxUOAPnfHIXRNt1PcF0njQnf04exhBi8DYIHf6_MBWkkrMKIRJdpmGdMZ8dQgaOKUvCrKEut-h9a5Sj8FSc3ZOUN3yVUEBRJTjyYAymDn-pmEkI-LoIJmMrHOmMsSaBqOomWgwD2l5tmSWd6iICyc0NH3D9K9cxGDhcqU6ZvfZRTZ2JOv18MARTp4F43hIjgNc6aOabqrP5-L_8GEeVcjiHW8UQ";
+var validToken="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxazlyU0s2NUZlbXp2VUNDMUpHZWZNTUZwT1R4YmdYVE4zcFNxVUtFTFZMVDFhNFJaSiIsImp0aSI6IjU5NWFhMzVkMmQ3MDhhYTQ0YzMzMTEzZmM3YWQ0Y2M2ZGE2MzM0MTkxYmMxNjhhMmNhNjdlYzE2ZDYyNTFkYjJmZTc0MWMyODM3NzI0MmI2IiwiaWF0IjoxNzA1ODkxMzgwLCJuYmYiOjE3MDU4OTEzODAsImV4cCI6MTcwNTg5NDk4MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.lrvNnAERvkogctdf_Wu-xqGyWS93qeQ0EjtNary9jmfRrH1wvr_iBR_lgSSp-L-Kkiz5sA5EUh0-RtNcfcYZWxeitZ2HWSvSVVD5CrxnecI5Xto8T2XSRL9prHiteusrdFeXyeDBgxq9LGsYR4ZTV-prLVJPWD0s8vnT_4bgQLFQ85nHEzJPnbEQoP-aidVNmTwinxNhoyABZcHkLk7M42PxFo3JnScVCRKg3GFUEk4z5CUOMxqjafn3x7_VqB_i4OsRKxTqBaDVUGoIueNd1DuyUXgRRfJ4hwj0Bj_-wQ4JXmnb9Q-Z2fkC8zT9AmsJ8BDEd7jm-_TZBIRzxbwJiw";
 
 /*
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,7 +78,6 @@ fetch('https://api.petfinder.com/v2/animals?type=dog&limit=30', {
                     <img src="${photo}" class="card-img-top" alt="...">
                     <div class="card-body" id="${item.id}">
                         <h5 id="name">${item.name}</h5>
-                        <p id="description">${item.description}</p>
                         <p id="type">E</p>
                         <a href="#" onclick="adicionarFavorito(${item.id})" class="btn btn-primary">Adicionar aos favoritos</a>
                     </div>
@@ -92,6 +91,15 @@ fetch('https://api.petfinder.com/v2/animals?type=dog&limit=30', {
  
    function adicionarFavorito(animalFavorito){
     console.info("Adicionado aos favoritos");
+/*
+    var feedbackMessage = document.getElementById("feedbackMessage");
+        
+    fadeIn(feedbackMessage);
+    setTimeout(function () {
+        fadeOut(feedbackMessage);
+    }, 4000);
+*/
+
     var arrayFavoritos = [];
     var dadosStorage = localStorage.getItem("listaAnimaisFavoritos");
     if(dadosStorage !== null){
@@ -101,3 +109,14 @@ fetch('https://api.petfinder.com/v2/animals?type=dog&limit=30', {
     var favoritosString = JSON.stringify(arrayFavoritos);
     localStorage.setItem("listaAnimaisFavoritos",favoritosString);
 }   
+
+function fadeIn(msg) {
+    msg.style.opacity = '1';
+}
+
+function fadeOut(msg) {
+    msg.style.opacity = '0';
+    setTimeout(function () {
+        msg.style.display = 'none';
+    }, 400);
+}
