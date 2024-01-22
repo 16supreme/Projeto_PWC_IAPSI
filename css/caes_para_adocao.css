@@ -90,3 +90,6 @@
     color: rgb(var(--bs-tertiary-color-rgb));
   }
   
+  .col {
+    display: flex;
+  }
